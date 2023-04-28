@@ -7,7 +7,7 @@ A simple toggle switch Blaze component for Meteor.
 Why this package?
 
 Well because we cannot just copy a Blaze component in each and every package or application which would need it:
-- first, because this vwould be bad as just duplicating code and thus bugs
+- first, because this is always a bad idea to just duplicate code, as this obviously also duplicates maintenance efforts and bugs
 - second, because Blaze has a single namespace per application, and so refuses to have a duplicated component name.
 
 ## Usage
@@ -69,4 +69,4 @@ This package has no NPM dependencies.
 
 ---
 P. Wieser
-- Last updated on 2023, Apr. 20th
+- Last updated on 2023, Apr. 28th
