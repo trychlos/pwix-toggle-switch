@@ -44,6 +44,10 @@ A simple toggle switch.
 
 The component is configurable with an object passed as an argument, which may contain:
 
+- `name`
+
+    A string which is expected to uniquely identify the toggle switch.
+
 - `labelTop`
 - `labelRight`
 - `labelBottom`
@@ -69,13 +73,13 @@ The component is configurable with an object passed as an argument, which may co
 
     The message is triggered as an answer to `ts-request` received event.
 
-    It holds associated `{ state: <state>, enable: <enabled> }` data.
+    It holds associated `{ name: <name>, state: <state>, enable: <enabled> }` data.
 
 - `ts-state`
 
     The message is triggered each time the state of the toggle switch changes.
 
-    It holds associated `{ state: <new_state> }` data, where &lt;new_state&gt; is `true` (resp. `false`) when switch is « On » (resp. « Off »).
+    It holds associated `{ name: <name>, state: <new_state> }` data, where &lt;new_state&gt; is `true` (resp. `false`) when switch is « On » (resp. « Off »).
 
 ### Action messages
 

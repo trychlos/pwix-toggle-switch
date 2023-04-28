@@ -5,13 +5,7 @@
  * from https://www.w3schools.com/howto/howto_css_switch.asp
  *
  * Parms:
- * - labelTop: a (HTML) string to be displayed above the switch, defaulting to none
- * - labelRight: a (HTML) string to be displayed on the right of the switch, defaulting to none
- * - labelBottom: a (HTML) string to be displayed below the switch, defaulting to none
- * - labelLeft: a (HTML) string to be displayed on the left of the switch, defaulting to none
- * - title: a label as the button title, defaulting to none
- * - state: whether the switch is initially on or off, defaulting to on
- * - enabled: whether the switch is enabled, defaulting to true
+ * - see README
  */
 
 import { ReactiveVar } from 'meteor/reactive-var';
@@ -24,6 +18,7 @@ Template.toggleSwitch.onCreated( function(){
 
     self.TS = {
         // arguments
+        name: new ReactiveVar( '' ),
         labelTop: new ReactiveVar( '' ),
         labelRight: new ReactiveVar( '' ),
         labelBottom: new ReactiveVar( '' ),
@@ -63,6 +58,7 @@ Template.toggleSwitch.onCreated( function(){
 
     // get arguments
     self.autorun(() => {
+        self.TS.argString( 'name' );
         self.TS.argString( 'labelTop' );
         self.TS.argString( 'labelRight' );
         self.TS.argString( 'labelBottom' );
@@ -70,6 +66,7 @@ Template.toggleSwitch.onCreated( function(){
         self.TS.argString( 'title' );
         self.TS.argBool( 'state' );
         self.TS.argBool( 'enabled' );
+        //console.log( 'state='+self.TS.state.get(), 'enabled='+self.TS.enabled.get());
     });
 });
 
@@ -78,12 +75,16 @@ Template.toggleSwitch.onRendered( function(){
 
     // set the initial state
     self.autorun(() => {
-        self.$( 'label.switch input' ).prop( 'checked', self.TS.state.get());
+        self.$( 'label.ts-switch input' ).prop( 'checked', self.TS.state.get());
     });
 
     // publish the state on changes
     self.autorun(() => {
-        self.$( 'toggleSwitch' ).trigger( 'ts-state', { state: self.TS.state.get() });
+        const state = self.TS.state.get();
+        self.$( '.toggleSwitch' ).trigger( 'ts-state', {
+            name: self.TS.name.get(),
+            state: state
+        });
     });
 });
 
@@ -100,12 +101,16 @@ Template.toggleSwitch.helpers({
 });
 
 Template.toggleSwitch.events({
-    'click label.switch input'( event, instance ){
+    'click label.ts-switch input'( event, instance ){
         const checked = instance.$( event.currentTarget ).prop( 'checked' );
         instance.TS.state.set( checked );
     },
 
     'ts-request .toggleSwitch'( event, instance ){
-        instance.$( event.currentTarget ).trigger( 'ts-answer', { state: instance.TS.state.get(), enabled: instance.TS.enabled.get() });
+        instance.$( event.currentTarget ).trigger( 'ts-answer', {
+            name: self.TS.name.get(),
+            state: instance.TS.state.get(),
+            enabled: instance.TS.enabled.get()
+        });
     }
 });
