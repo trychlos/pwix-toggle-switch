@@ -2,8 +2,8 @@
 
 | Version | Release    | Content |
 | ---:    | :---       | :---    |
-| 1.0.0   | 2023- 1-28 | Initial release |
+| 0.2.0   | 2023- 4-28 | Initial release |
 
 ---
 P. Wieser
-- Last updated on 2023, Apr. 18th
+- Last updated on 2023, Apr. 28th
