@@ -63,6 +63,26 @@ The component is configurable with an object passed as an argument, which may co
 
     Whether the switch is enabled, defaulting to `true`.
 
+### Informational messages
+
+- `ts-answer`
+
+    The message is triggered as an answer to `ts-request` received event.
+
+    It holds associated `{ state: <state>, enable: <enabled> }` data.
+
+- `ts-state`
+
+    The message is triggered each time the state of the toggle switch changes.
+
+    It holds associated `{ state: <new_state> }` data, where &lt;new_state&gt; is `true` (resp. `false`) when switch is « On » (resp. « Off »).
+
+### Action messages
+
+- `ts-request`
+
+    The message can be sent to the `toggleSwitch` component class to request a `ts-answer` answer.
+
 ## NPM peer dependencies
 
 This package has no NPM dependencies.

@@ -80,6 +80,11 @@ Template.toggleSwitch.onRendered( function(){
     self.autorun(() => {
         self.$( 'label.switch input' ).prop( 'checked', self.TS.state.get());
     });
+
+    // publish the state on changes
+    self.autorun(() => {
+        self.$( 'toggleSwitch' ).trigger( 'ts-state', { state: self.TS.state.get() });
+    });
 });
 
 Template.toggleSwitch.helpers({
@@ -91,5 +96,16 @@ Template.toggleSwitch.helpers({
     label( name ){
         const TS = Template.instance().TS;
         return TS[name].get();
+    }
+});
+
+Template.toggleSwitch.events({
+    'click label.switch input'( event, instance ){
+        const checked = instance.$( event.currentTarget ).prop( 'checked' );
+        instance.TS.state.set( checked );
+    },
+
+    'ts-request .toggleSwitch'( event, instance ){
+        instance.$( event.currentTarget ).trigger( 'ts-answer', { state: instance.TS.state.get(), enabled: instance.TS.enabled.get() });
     }
 });
