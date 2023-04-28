@@ -1,0 +1,42 @@
+<template name="toggleSwitch">
+    <div class="toggleSwitch">
+
+        <div class="ts-flex-row">
+
+            {{#if label "labelLeft" }}
+                <div class="ts-mr05em">
+                    {{{ label "labelLeft" }}}
+                </div>
+            {{/if}}
+
+            <div class="ts-flex-column">
+
+                {{#if label "labelTop" }}
+                    <div class="ts-mb2px">
+                        {{{ label "labelTop" }}}
+                    </div>
+                {{/if}}
+
+                <label class="switch" title="{{ label "title" }}">
+                    <input type="checkbox" {{ enabled }} />
+                    <span class="slider round"></span>
+                </label>
+        
+                {{#if label "labelBottom" }}
+                    <div>
+                        {{{ label "labelBottom" }}}
+                    </div>
+                {{/if}}
+
+            </div>
+
+            {{#if label "labelRight" }}
+                <div class="ts-ml05em">
+                    {{{ label "labelRight" }}}
+                </div>
+            {{/if}}
+
+        </div>
+
+    </div>
+</template>
