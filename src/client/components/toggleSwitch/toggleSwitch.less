@@ -4,7 +4,18 @@
  */
 
 .toggleSwitch {
-    font-size: 90%;
+
+    --toggle-switch-font-size: 90%;             // this also determines the size of 1em: 16px * 0.9 = 14.4px
+    --toggle-switch-slider: 1em;                // diameter of the circle
+    --toggle-switch-margin: 2px;
+    --toggle-switch-height: calc( var( --toggle-switch-slider ) + calc( 2 * var( --toggle-switch-margin )));
+    --toggle-switch-width: calc( calc( var( --toggle-switch-slider ) + var( --toggle-switch-margin )) * 2 );
+    --toggle-switch-on-color: #0d6efd;        // this is also --bs-primary
+    --toggle-switch-off-color: #adb5bd;       // this is also --bs-gray-500, the middle of the grays scale
+    --toggle-switch-slider-color: white;
+    --toggle-switch-opacity: 67%;
+
+    font-size: var( --toggle-switch-font-size ); 
 
     .ts-flex-row {
         display: flex;
@@ -27,11 +38,7 @@
     }
 
     // The switch - the box around the slider
-    label.switch {
-        --toggle-switch-slider: 1em;
-        --toggle-switch-margin: 4px;
-        --toggle-switch-height: calc( var( --toggle-switch-slider ) + calc( 2 * var( --toggle-switch-margin )));
-        --toggle-switch-width: calc( calc( var( --toggle-switch-slider ) + var( --toggle-switch-margin )) * 2 );
+    label.ts-switch {
 
         position: relative;
         display: inline-block;
@@ -45,45 +52,48 @@
             height: 0;
         }
         // The slider
-        .slider {
+        .ts-slider {
             position: absolute;
             cursor: pointer;
             top: 0;
             left: 0;
             right: 0;
             bottom: 0;
-            background-color: #ccc;
+            background-color: var( --toggle-switch-off-color );
             -webkit-transition: .4s;
             transition: .4s;
         }
-        .slider:before {
+        .ts-slider:before {
             position: absolute;
-            content: "";
+            content: '';
             height: var( --toggle-switch-slider );
             width: var( --toggle-switch-slider );
             left: var( --toggle-switch-margin );
             bottom: var( --toggle-switch-margin );
-            background-color: white;
+            background-color: var( --toggle-switch-slider-color );
             -webkit-transition: .4s;
             transition: .4s;
         }
-        input:checked + .slider {
-            background-color: #2196F3;
+        input:checked + .ts-slider {
+            background-color: var( --toggle-switch-on-color );
         }
-        input:focus + .slider {
-            box-shadow: 0 0 1px #2196F3;
+        input:focus + .ts-slider {
+            box-shadow: 0 0 1px var( --toggle-switch-on-color );
         }
-        input:checked + .slider:before {
+        input:checked + .ts-slider:before {
             -webkit-transform: translateX( var( --toggle-switch-slider ));
             -ms-transform: translateX( var( --toggle-switch-slider ));
             transform: translateX( var( --toggle-switch-slider ));
         }
         // Rounded sliders
-        .slider.round {
+        .ts-slider.ts-round {
             border-radius: var( --toggle-switch-height );
         }
-        .slider.round:before {
+        .ts-slider.ts-round:before {
             border-radius: 50%;
         }
+    }
+    label.ts-switch.disabled {
+        opacity: var( --toggle-switch-opacity );
     }
 }

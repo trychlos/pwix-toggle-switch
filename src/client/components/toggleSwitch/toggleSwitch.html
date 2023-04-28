@@ -17,9 +17,9 @@
                     </div>
                 {{/if}}
 
-                <label class="switch" title="{{ label "title" }}">
+                <label class="ts-switch {{ enabled }}" title="{{ label "title" }}">
                     <input type="checkbox" {{ enabled }} />
-                    <span class="slider round"></span>
+                    <span class="ts-slider ts-round"></span>
                 </label>
         
                 {{#if label "labelBottom" }}
