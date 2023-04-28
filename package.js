@@ -1,6 +1,6 @@
 Package.describe({
     name: 'pwix:toggle-switch',
-    version: '0.1.0',
+    version: '0.2.0',
     summary: 'A toggle switch Blaze component',
     git: 'https://github.com/trychlos/pwix-toggle-switch',
     documentation: 'README.md'
@@ -14,7 +14,7 @@ Package.onUse( function( api ){
 Package.onTest( function( api ){
     configure( api );
     api.use( 'tinytest' );
-    api.use( 'pwix:i18n' );
+    api.use( 'pwix:toggle-switch' );
     api.mainModule( 'test/js/index.js' );
 });
 
