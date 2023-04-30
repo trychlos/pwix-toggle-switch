@@ -10,7 +10,10 @@
 
 |   Id | Date       | Description and comment(s) |
 | ---: | :---       | :---                       |
-|    1 |  |  |
+|    1 | 2023- 4-30 | Configure the transition delay |
+|    2 | 2023- 4-30 | Configure the 'on' color |
+|    3 | 2023- 4-30 | Configure button height |
+|    4 |  |  |
 
 ---
 ## Done
@@ -20,4 +23,4 @@
 
 ---
 P. Wieser
-- Last updated on 2023, Apr. 28th
+- Last updated on 2023, Apr. 30th
