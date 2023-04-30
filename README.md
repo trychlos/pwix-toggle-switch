@@ -40,7 +40,15 @@ None at the moment.
 
 ### `toggleSwitch`
 
-A simple toggle switch.
+A simple toggle switch:
+
+- an example with a `labelBottom` set, switch is « On »
+
+    ![switch on](/maintainer/png/toggle-switch-on.png)
+
+- an example with a `labelBottom` set, switch is « Off »
+
+    ![switch on](/maintainer/png/toggle-switch-off.png)
 
 The component is configurable with an object passed as an argument, which may contain:
 
