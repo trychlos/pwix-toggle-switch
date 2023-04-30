@@ -1,6 +1,6 @@
 Package.describe({
     name: 'pwix:toggle-switch',
-    version: '0.3.1-rc',
+    version: '0.3.1',
     summary: 'A toggle switch Blaze component',
     git: 'https://github.com/trychlos/pwix-toggle-switch',
     documentation: 'README.md'
