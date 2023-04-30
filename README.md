@@ -50,6 +50,14 @@ A simple toggle switch:
 
     ![switch on](/maintainer/png/toggle-switch-off.png)
 
+- an example with `labelTop` and `labelBottom` set
+
+    ![switch top+bottom](/maintainer/png/toggle-switch-top.png)
+
+- an example with `labelLeft` and `labelRight` set
+
+    ![switch left+right](/maintainer/png/toggle-switch-left.png)
+
 The component is configurable with an object passed as an argument, which may contain:
 
 - `name`
