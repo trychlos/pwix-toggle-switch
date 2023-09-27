@@ -13,7 +13,8 @@
 |    1 | 2023- 4-30 | Configure the transition delay |
 |    2 | 2023- 4-30 | Configure the 'on' color |
 |    3 | 2023- 4-30 | Configure button height |
-|    4 |  |  |
+|    4 | 2023- 9-27 | Have a reactive enabled state |
+|    5 |  |  |
 
 ---
 ## Done
