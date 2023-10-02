@@ -25,6 +25,3 @@ function configure( api ){
     api.use( 'less@4.0.0', 'client' );
     api.addFiles( 'src/client/components/toggleSwitch/toggleSwitch.js', 'client' );
 }
-
-// NPM dependencies are checked in /src/server/js/check_npms.js
-// See also https://guide.meteor.com/writing-atmosphere-packages.html#npm-dependencies
