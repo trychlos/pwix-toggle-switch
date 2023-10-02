@@ -114,7 +114,7 @@ Template.toggleSwitch.helpers({
 Template.toggleSwitch.events({
     'click .ts-switch input'( event, instance ){
         const checked = instance.$( event.currentTarget ).prop( 'checked' );
-        console.debug( 'checked', checked );
+        //console.debug( 'checked', checked );
         instance.TS.state.set( checked );
     },
 
