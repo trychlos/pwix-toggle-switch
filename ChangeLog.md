@@ -6,7 +6,7 @@
 
     Release date: 
 
-    - 
+    - Make the cursor a pointer on the whole toggle switch
 
 ### 0.3.1
 

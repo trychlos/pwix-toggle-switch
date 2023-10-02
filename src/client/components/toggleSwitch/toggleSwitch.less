@@ -15,7 +15,7 @@
     --toggle-switch-slider-color: white;
     --toggle-switch-opacity: 67%;
 
-    font-size: var( --toggle-switch-font-size ); 
+    font-size: var( --toggle-switch-font-size );
 
     .ts-flex-row {
         display: flex;
@@ -37,8 +37,16 @@
         margin-bottom: 2px;
     }
 
+    .form-check {
+        padding: 0;
+        cursor: pointer;
+        label {
+            cursor: inherit;
+        }
+    }
+
     // The switch - the box around the slider
-    label.ts-switch {
+    .ts-switch {
 
         position: relative;
         display: inline-block;
@@ -54,7 +62,6 @@
         // The slider
         .ts-slider {
             position: absolute;
-            cursor: pointer;
             top: 0;
             left: 0;
             right: 0;

@@ -8,6 +8,7 @@
  * - see README
  */
 
+import { Random } from 'meteor/random';
 import { ReactiveVar } from 'meteor/reactive-var';
 
 import './toggleSwitch.html';
@@ -26,6 +27,7 @@ Template.toggleSwitch.onCreated( function(){
         title: new ReactiveVar( '' ),
         state: new ReactiveVar( true ),
         enabled: new ReactiveVar( true ),
+        id: null,
 
         // get a bool arg if present
         argBool( name ){
@@ -75,7 +77,7 @@ Template.toggleSwitch.onRendered( function(){
 
     // set the initial state
     self.autorun(() => {
-        self.$( 'label.ts-switch input' ).prop( 'checked', self.TS.state.get());
+        self.$( '.ts-switch input' ).prop( 'checked', self.TS.state.get());
     });
 
     // publish the state on changes
@@ -94,6 +96,15 @@ Template.toggleSwitch.helpers({
         return TS.enabled.get() ? '' : 'disabled';
     },
 
+    // generate a unique id for the switch, thus associating label and input
+    id(){
+        const TS = Template.instance().TS;
+        if( !TS.id ){
+            TS.id = Random.id();
+        }
+        return TS.id;
+    },
+
     label( name ){
         const TS = Template.instance().TS;
         return TS[name].get();
@@ -101,9 +112,14 @@ Template.toggleSwitch.helpers({
 });
 
 Template.toggleSwitch.events({
-    'click label.ts-switch input'( event, instance ){
+    'click .ts-switch input'( event, instance ){
         const checked = instance.$( event.currentTarget ).prop( 'checked' );
+        console.debug( 'checked', checked );
         instance.TS.state.set( checked );
+    },
+
+    'click .ts-switch .ts-slider'( event, instance ){
+        instance.$( event.currentTarget ).closest( '.ts-switch' ).find( 'input' ).click();
     },
 
     'ts-request .toggleSwitch'( event, instance ){

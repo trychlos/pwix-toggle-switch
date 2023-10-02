@@ -1,42 +1,74 @@
 <template name="toggleSwitch">
     <div class="toggleSwitch">
 
-        <div class="ts-flex-row">
+        <div class="form-check {{ enabled }} ts-flex-row" title="{{ label "title" }}">
 
             {{#if label "labelLeft" }}
-                <div class="ts-mr05em">
-                    {{{ label "labelLeft" }}}
-                </div>
+                <label class="form-check-label" for="{{ id }}">
+                    <span class="ts-mr05em">{{{ label "labelLeft" }}}</span>
+                </label>
             {{/if}}
 
             <div class="ts-flex-column">
 
                 {{#if label "labelTop" }}
-                    <div class="ts-mb2px">
-                        {{{ label "labelTop" }}}
-                    </div>
+                    <label class="form-check-label" for="{{ id }}">
+                        <span class="ts-mb2px">{{{ label "labelTop" }}}</span>
+                    </label>
                 {{/if}}
 
-                <label class="ts-switch {{ enabled }}" title="{{ label "title" }}">
-                    <input type="checkbox" {{ enabled }} />
+                <div class="ts-switch">
+                    <input type="checkbox" id="{{ id }}" {{ enabled }} />
                     <span class="ts-slider ts-round"></span>
-                </label>
-        
+                </div>
+    
                 {{#if label "labelBottom" }}
-                    <div>
-                        {{{ label "labelBottom" }}}
-                    </div>
+                    <label class="form-check-label" for="{{ id }}">
+                        <span>{{{ label "labelBottom" }}}</span>
+                    </label>
                 {{/if}}
 
             </div>
 
             {{#if label "labelRight" }}
-                <div class="ts-ml05em">
-                    {{{ label "labelRight" }}}
-                </div>
+                <label class="form-check-label" for="{{ id }}">
+                    <span class="ts-ml05em">{{{ label "labelRight" }}}</span>
+                </label>
             {{/if}}
 
         </div>
+
+
+        <!--
+        <label class="ts-switch {{ enabled }}" title="{{ label "title" }}">
+
+            <div class="ts-flex-row">
+
+                {{#if label "labelLeft" }}
+                    <span class="ts-mr05em">{{{ label "labelLeft" }}}</span>
+                {{/if}}
+
+                <div class="ts-flex-column">
+
+                    {{#if label "labelTop" }}
+                        <span class="ts-mb2px">{{{ label "labelTop" }}}</span>
+                    {{/if}}
+
+
+                    {{#if label "labelBottom" }}
+                        <span>{{{ label "labelBottom" }}}</span>
+                    {{/if}}
+
+                </div>
+
+                {{#if label "labelRight" }}
+                    <span class="ts-ml05em">{{{ label "labelRight" }}}</span>
+                {{/if}}
+
+            </div>
+    
+        </label>
+        -->
 
     </div>
 </template>
