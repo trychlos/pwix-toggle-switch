@@ -2,9 +2,9 @@
 
 ## ChangeLog
 
-### 0.3.2-rc
+### 0.3.2
 
-    Release date: 
+    Release date: 2023-10-11
 
     - Make the cursor a pointer on the whole toggle switch
 
@@ -28,4 +28,4 @@
 
 ---
 P. Wieser
-- Last updated on 2023, Apr. 30th
+- Last updated on 2023, Oct. 11th
