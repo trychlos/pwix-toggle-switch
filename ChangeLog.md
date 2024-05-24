@@ -6,7 +6,7 @@
 
     Release date: 
 
-    - 
+    - Meteor 3.0 ready
 
 ### 0.3.2
 
