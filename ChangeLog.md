@@ -6,7 +6,7 @@
 
     Release date: 
 
-    - 
+    - Decrease the horizontal margins between the label and the button
 
 ### 0.3.3
 
