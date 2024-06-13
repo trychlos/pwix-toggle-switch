@@ -4,9 +4,10 @@
 
 ### 0.3.4-rc
 
-    Release date: 
+    Release date:
 
     - Decrease the horizontal margins between the label and the button
+    - Minor README update
 
 ### 0.3.3
 

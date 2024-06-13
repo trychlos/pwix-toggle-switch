@@ -1,6 +1,6 @@
 # pwix:toggle-switch
 
-## What is it
+## What is it ?
 
 A simple toggle switch Blaze component for Meteor.
 
@@ -10,19 +10,27 @@ Well because we cannot just copy a Blaze component in each and every package or 
 - first, because this is always a bad idea to just duplicate code, as this obviously also duplicates maintenance efforts and bugs
 - second, because Blaze has a single namespace per application, and so refuses to have a duplicated component name.
 
+## Installation
+
+This Meteor package is installable with the usual command:
+
+```sh
+    meteor add pwix:toggle-switch
+```
+
 ## Usage
 
 Very simple:
 
 ### In your HTML template
 
-```
+```html
     {{> toggleSwitch (switchParms) }}
 ```
 
 ### In your template helper
 
-```
+```js
     switchParms(){
         return {
             labelLeft: 'my label'
@@ -30,15 +38,11 @@ Very simple:
     }
 ```
 
-## Configuration
-
-None at the moment.
-
 ## Provides
 
 ### Blaze components
 
-### `toggleSwitch`
+#### `toggleSwitch`
 
 A simple toggle switch:
 
@@ -83,7 +87,7 @@ The component is configurable with an object passed as an argument, which may co
 
     Whether the switch is enabled, defaulting to `true`.
 
-### Informational messages
+#### Informational events
 
 - `ts-answer`
 
@@ -97,15 +101,31 @@ The component is configurable with an object passed as an argument, which may co
 
     It holds associated `{ name: <name>, state: <new_state> }` data, where &lt;new_state&gt; is `true` (resp. `false`) when switch is « On » (resp. « Off »).
 
-### Action messages
+#### Action events
 
 - `ts-request`
 
     The message can be sent to the `toggleSwitch` component class to request a `ts-answer` answer.
 
+## Configuration
+
+None at the moment.
+
 ## NPM peer dependencies
 
-This package has no NPM dependencies.
+None at the moment.
+
+## Translations
+
+None at the moment.
+
+## Cookies and comparable technologies
+
+None at the moment.
+
+## Issues & help
+
+In case of support or error, please report your issue request to our [Issues tracker](https://github.com/trychlos/pwix-toggle-switch/issues).
 
 ---
 P. Wieser
