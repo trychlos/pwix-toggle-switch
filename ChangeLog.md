@@ -2,9 +2,9 @@
 
 ## ChangeLog
 
-### 0.3.4-rc
+### 0.3.4
 
-    Release date:
+    Release date: 2024- 6-13
 
     - Decrease the horizontal margins between the label and the button
     - Minor README update
@@ -41,4 +41,4 @@
 
 ---
 P. Wieser
-- Last updated on 2024, May. 24th
+- Last updated on 2024, Jun. 13th
