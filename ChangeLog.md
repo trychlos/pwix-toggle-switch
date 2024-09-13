@@ -2,6 +2,12 @@
 
 ## ChangeLog
 
+### 0.3.6-rc
+
+    Release date: 
+
+    - 
+
 ### 0.3.5
 
     Release date: 2024- 6-13
