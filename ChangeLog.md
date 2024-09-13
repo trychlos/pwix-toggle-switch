@@ -2,7 +2,7 @@
 
 ## ChangeLog
 
-### 0.3.4
+### 0.3.5
 
     Release date: 2024- 6-13
 
@@ -41,4 +41,4 @@
 
 ---
 P. Wieser
-- Last updated on 2024, Jun. 13th
+- Last updated on 2024, Sep. 13th
