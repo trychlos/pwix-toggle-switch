@@ -6,7 +6,7 @@
 
     Release date: 
 
-    - 
+    - Better align left and right labels
 
 ### 0.3.5
 
