@@ -7,6 +7,7 @@
     Release date: 
 
     - Better align left and right labels
+    - Have a 'button' element to get more consistency in header pages
 
 ### 0.3.5
 

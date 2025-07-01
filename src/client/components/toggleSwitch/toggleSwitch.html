@@ -1,10 +1,10 @@
 <template name="toggleSwitch">
     <div class="toggleSwitch">
 
-        <div class="form-check {{ enabled }} ts-flex-row" title="{{ label "title" }}">
+        <button class="btn {{ enabled }} ts-flex-row" title="{{ label "title" }}">
 
             {{#if label "labelLeft" }}
-                <label class="form-check-label ts-left" for="{{ id }}">
+                <label class="form-label ts-left" for="{{ id }}">
                     <span class="ts-mr025em">{{{ label "labelLeft" }}}</span>
                 </label>
             {{/if}}
@@ -12,7 +12,7 @@
             <div class="ts-flex-column">
 
                 {{#if label "labelTop" }}
-                    <label class="form-check-label ts-top" for="{{ id }}">
+                    <label class="form-label ts-top" for="{{ id }}">
                         <span class="ts-mb2px">{{{ label "labelTop" }}}</span>
                     </label>
                 {{/if}}
@@ -23,7 +23,7 @@
                 </div>
     
                 {{#if label "labelBottom" }}
-                    <label class="form-check-label ts-bottom" for="{{ id }}">
+                    <label class="form-label ts-bottom" for="{{ id }}">
                         <span>{{{ label "labelBottom" }}}</span>
                     </label>
                 {{/if}}
@@ -31,12 +31,12 @@
             </div>
 
             {{#if label "labelRight" }}
-                <label class="form-check-label ts-right" for="{{ id }}">
+                <label class="form-label ts-right" for="{{ id }}">
                     <span class="ts-ml025em">{{{ label "labelRight" }}}</span>
                 </label>
             {{/if}}
 
-        </div>
+        </button>
 
     </div>
 </template>
