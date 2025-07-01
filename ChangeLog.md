@@ -2,9 +2,9 @@
 
 ## ChangeLog
 
-### 0.3.6-rc
+### 0.3.6
 
-    Release date: 
+    Release date: 2025- 7- 1
 
     - Better align left and right labels
     - Have a 'button' element to get more consistency in header pages
@@ -48,4 +48,4 @@
 
 ---
 P. Wieser
-- Last updated on 2024, Sep. 13th
+- Last updated on 2025, Jul. 1st
