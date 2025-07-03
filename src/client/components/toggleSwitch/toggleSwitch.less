@@ -17,6 +17,12 @@
 
     font-size: var( --toggle-switch-font-size );
 
+    // make the active button transparent
+    // aka doesn't display the button border when the user clicks on it
+    button.btn:active {
+        border-color: transparent;
+    }
+
     .ts-flex-row {
         display: flex;
         flex-direction: row;

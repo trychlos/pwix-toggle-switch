@@ -6,7 +6,7 @@
 
     Release date: 
 
-    - 
+    - Make the active button transparent
 
 ### 0.3.6
 
