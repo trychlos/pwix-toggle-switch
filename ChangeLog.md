@@ -7,6 +7,7 @@
     Release date: 
 
     - Make the active button transparent
+    - Fix the cursor to be continuous on the whole widget
 
 ### 0.3.6
 

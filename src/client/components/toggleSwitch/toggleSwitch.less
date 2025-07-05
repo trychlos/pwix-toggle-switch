@@ -19,7 +19,8 @@
 
     // make the active button transparent
     // aka doesn't display the button border when the user clicks on it
-    button.btn:active {
+    button.btn:active,
+    button.btn.disabled {
         border-color: transparent;
     }
 
@@ -108,7 +109,13 @@
             border-radius: 50%;
         }
     }
-    label.ts-switch.disabled {
+    .ts-switch input.disabled {
         opacity: var( --toggle-switch-opacity );
+    }
+
+    // have a continuous pointer
+    button.btn,
+    label.form-label {
+        cursor: pointer;
     }
 }
