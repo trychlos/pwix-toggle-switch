@@ -2,6 +2,12 @@
 
 ## ChangeLog
 
+### 0.3.8-rc
+
+    Release date: 
+
+    - 
+
 ### 0.3.7
 
     Release date: 2025- 7- 8
