@@ -2,9 +2,9 @@
 
 ## ChangeLog
 
-### 0.3.7-rc
+### 0.3.7
 
-    Release date: 
+    Release date: 2025- 7- 8
 
     - Make the active button transparent
     - Fix the cursor to be continuous on the whole widget
@@ -55,4 +55,4 @@
 
 ---
 P. Wieser
-- Last updated on 2025, Jul. 1st
+- Last updated on 2025, Jul. 8th
