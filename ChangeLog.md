@@ -6,7 +6,7 @@
 
     Release date: 
 
-    - 
+    - Label is italic when the button is disabled
 
 ### 0.3.7
 
