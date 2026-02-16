@@ -7,6 +7,7 @@
     Release date: 
 
     - Label is italic when the button is disabled
+    - Vertically center the horizontal label against the switch
 
 ### 0.3.7
 
