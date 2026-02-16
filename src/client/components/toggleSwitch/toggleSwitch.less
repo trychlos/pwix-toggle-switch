@@ -35,10 +35,27 @@
         font-style: italic;
     }
 
+    // have a badge
+    // since v0.4
+    .badge {
+        padding: var( --bs-badge-padding-y ) var( --bs-badge-padding-y );
+        position: relative;
+        left: -2.5em;
+        top: -0.75em;
+        svg {
+            padding-right: 0.1em;
+        }
+    }
+
+    .form-label {
+        padding-right: 0;
+    }
+
     .ts-flex-row {
         display: flex;
         flex-direction: row;
         align-items: center;
+        flex-wrap: nowrap;
     }
     .ts-flex-column {
         display: flex;
@@ -59,10 +76,6 @@
     }
     .ts-mb2px {
         margin-bottom: 2px;
-    }
-
-    .form-label {
-        padding-right: 0;
     }
 
     // The switch - the box around the slider

@@ -87,6 +87,10 @@ The component is configurable with an object passed as an argument, which may co
 
     Whether the switch is enabled, defaulting to `true`.
 
+- `badge`
+
+    A HTML badge definition to display on top of the button, defaulting to none.
+
 #### Informational events
 
 - `ts-answer`

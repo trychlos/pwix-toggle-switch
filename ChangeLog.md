@@ -2,12 +2,13 @@
 
 ## ChangeLog
 
-### 0.3.8-rc
+### 0.4.0-rc.0
 
     Release date: 
 
     - Label is italic when the button is disabled
     - Vertically center the horizontal label against the switch
+    - Now accepts a badge to be displayed on the button, thus bumping minor candidate version number
 
 ### 0.3.7
 

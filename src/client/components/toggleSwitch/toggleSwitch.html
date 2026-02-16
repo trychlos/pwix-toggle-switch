@@ -1,42 +1,47 @@
 <template name="toggleSwitch">
     <div class="toggleSwitch">
 
-        <button class="btn {{ enabled }} ts-flex-row" title="{{ label "title" }}">
+        <div class="ts-flex-row">
+            <button class="btn {{ enabled }} ts-flex-row" title="{{ label "title" }}">
 
-            {{#if label "labelLeft" }}
-                <label class="form-label ts-left" for="{{ id }}">
-                    <span class="ts-mr025em">{{{ label "labelLeft" }}}</span>
-                </label>
-            {{/if}}
-
-            <div class="ts-flex-column">
-
-                {{#if label "labelTop" }}
-                    <label class="form-label ts-top" for="{{ id }}">
-                        <span class="ts-mb2px">{{{ label "labelTop" }}}</span>
+                {{#if label "labelLeft" }}
+                    <label class="form-label ts-left" for="{{ id }}">
+                        <span class="ts-mr025em">{{{ label "labelLeft" }}}</span>
                     </label>
                 {{/if}}
 
-                <div class="ts-switch">
-                    <input type="checkbox" id="{{ id }}" {{ enabled }} />
-                    <span class="ts-slider ts-round"></span>
+                <div class="ts-flex-column">
+
+                    {{#if label "labelTop" }}
+                        <label class="form-label ts-top" for="{{ id }}">
+                            <span class="ts-mb2px">{{{ label "labelTop" }}}</span>
+                        </label>
+                    {{/if}}
+
+                    <div class="ts-switch">
+                        <input type="checkbox" id="{{ id }}" {{ enabled }} />
+                        <span class="ts-slider ts-round"></span>
+                    </div>
+
+                    {{#if label "labelBottom" }}
+                        <label class="form-label ts-bottom" for="{{ id }}">
+                            <span>{{{ label "labelBottom" }}}</span>
+                        </label>
+                    {{/if}}
+
                 </div>
-    
-                {{#if label "labelBottom" }}
-                    <label class="form-label ts-bottom" for="{{ id }}">
-                        <span>{{{ label "labelBottom" }}}</span>
+
+                {{#if label "labelRight" }}
+                    <label class="form-label ts-right" for="{{ id }}">
+                        <span class="ts-ml025em">{{{ label "labelRight" }}}</span>
                     </label>
                 {{/if}}
 
-            </div>
+            </button>
 
-            {{#if label "labelRight" }}
-                <label class="form-label ts-right" for="{{ id }}">
-                    <span class="ts-ml025em">{{{ label "labelRight" }}}</span>
-                </label>
-            {{/if}}
-
-        </button>
+            {{! badge is outside of the button so that title is available even when button is disabled }}
+            {{{ badge }}}
+        </div>
 
     </div>
 </template>

@@ -27,12 +27,13 @@ Template.toggleSwitch.onCreated( function(){
         title: new ReactiveVar( '' ),
         state: new ReactiveVar( true ),
         enabled: new ReactiveVar( true ),
+        badge: new ReactiveVar( '' ),
         id: null,
 
         // get a bool arg if present
-        argBool( name ){
-            if( Object.keys( Template.currentData()).includes( name )){
-                const b = Template.currentData()[name];
+        argBool( data, name, defvalue ){
+            if( Object.keys( data ).includes( name )){
+                const b = data[name];
                 if( b === true || b === false ){
                     self.TS[name].set( b );
                 } else if( b === 'true' || b === 'false' ){
@@ -40,34 +41,38 @@ Template.toggleSwitch.onCreated( function(){
                 } else {
                     console.warn( 'toggleSwitch expects \''+name+'\' be a boolean, found', b );
                 }
+            } else {
+                self.TS[name].set( defvalue );
             }
         },
 
         // get a string arg if present
-        argString( name ){
-            if( Object.keys( Template.currentData()).includes( name )){
-                const s = Template.currentData()[name];
-                if( s ){
-                    if( typeof s === 'string' || s instanceof String ){
-                        self.TS[name].set( s );
-                    } else {
-                        console.warn( 'toggleSwitch expects \''+name+'\' be a string, found', s );
-                    }
+        argString( data, name, defvalue ){
+            if( Object.keys( data ).includes( name )){
+                const s = data[name];
+                if( typeof s === 'string' || s instanceof String ){
+                    self.TS[name].set( s );
+                } else {
+                    console.warn( 'toggleSwitch expects \''+name+'\' be a string, found', s );
                 }
+            } else {
+                self.TS[name].set( defvalue );
             }
         }
     };
 
     // get arguments
     self.autorun(() => {
-        self.TS.argString( 'name' );
-        self.TS.argString( 'labelTop' );
-        self.TS.argString( 'labelRight' );
-        self.TS.argString( 'labelBottom' );
-        self.TS.argString( 'labelLeft' );
-        self.TS.argString( 'title' );
-        self.TS.argBool( 'state' );
-        self.TS.argBool( 'enabled' );
+        const data = Template.currentData();
+        self.TS.argString( data, 'name', '' );
+        self.TS.argString( data, 'labelTop', '' );
+        self.TS.argString( data, 'labelRight', '' );
+        self.TS.argString( data, 'labelBottom', '' );
+        self.TS.argString( data, 'labelLeft', '' );
+        self.TS.argString( data, 'title', '' );
+        self.TS.argBool( data, 'state', true );
+        self.TS.argBool( data, 'enabled', true );
+        self.TS.argString( data, 'badge', '' );
         //console.log( 'state='+self.TS.state.get(), 'enabled='+self.TS.enabled.get());
     });
 });
@@ -91,6 +96,11 @@ Template.toggleSwitch.onRendered( function(){
 });
 
 Template.toggleSwitch.helpers({
+    badge(){
+        const TS = Template.instance().TS;
+        return TS.badge.get();
+    },
+
     enabled(){
         const TS = Template.instance().TS;
         return TS.enabled.get() ? '' : 'disabled';
