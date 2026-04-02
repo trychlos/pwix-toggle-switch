@@ -2,9 +2,9 @@
 
 ## ChangeLog
 
-### 0.4.0-rc.0
+### 0.4.0
 
-    Release date: 
+    Release date: 2026- 4- 2
 
     - Label is italic when the button is disabled
     - Vertically center the horizontal label against the switch
@@ -63,4 +63,4 @@
 
 ---
 P. Wieser
-- Last updated on 2025, Jul. 8th
+- Last updated on 2026, Apr. 2nd
